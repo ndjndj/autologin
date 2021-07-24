@@ -2,5 +2,8 @@
   "name": "view",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^13.1.7"
+  }
 }
