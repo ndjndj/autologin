@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ndjndj/autologin/issues"
   },
-  "homepage": "https://github.com/ndjndj/autologin#readme"
+  "homepage": "https://github.com/ndjndj/autologin#readme",
+  "devDependencies": {
+    "electron": "^13.1.7"
+  }
 }
