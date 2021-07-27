@@ -5,7 +5,7 @@ const BrowserWindow = electron.BrowserWindow;
 let mainWindow = null;
 app.on('ready', () => {
     // mainWindow を作成
-    mainWindow = new BrowserWindow({width: 400, height: 400});
+    mainWindow = new BrowserWindow({width: 400, height: 400, 'webPreferences': {'webviewTag': true}});
 
     // html を指定
     let path = 'file://' + __dirname + '/index.html';
