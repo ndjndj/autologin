@@ -14,7 +14,8 @@
     ></webview>
 
     <script type="text/javascript">
-        document.getElementById('wv').openDevTools();
-    </script>
+webview.addEventListener("dom-ready", function(){
+  webview.openDevTools();
+});    </script>
 </body>
 </html>

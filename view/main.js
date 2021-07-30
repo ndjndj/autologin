@@ -1,6 +1,7 @@
 const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
+const BrowserView = electron.BrowserView;
 
 let mainWindow = null;
 app.on('ready', () => {
