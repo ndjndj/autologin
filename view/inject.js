@@ -1,6 +1,11 @@
 console.log('injection successed!!!');
 
-
+document.addEventListener(
+    'click',
+    function(e) {
+        console.log(getXPath(e.target));
+    }
+);
 
 
 function getXPath(element) {
