@@ -9,13 +9,13 @@ app.on('ready', () => {
     mainWindow = new BrowserWindow({width: 400, height: 400});
 
     // html を指定
-    let path = 'file://' + __dirname + '/index.html';
-    mainWindow.loadURL(path);
+    let fileName = 'file://' + __dirname + '/index.html';
+    mainWindow.loadURL(fileName);
 
     const view = new BrowserView(
         {
             webPreferences: {
-                preload: path.resolve(__dirname, 'inject.js')
+                preload:
             }
         }
 
