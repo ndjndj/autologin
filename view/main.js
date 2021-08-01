@@ -15,7 +15,7 @@ app.on('ready', () => {
     const view = new BrowserView(
         {
             webPreferences: {
-                preload: 'inject.js'
+                preload: path.resolve(__dirname, 'inject.js')
             }
         }
 
