@@ -1,4 +1,32 @@
 console.log('injection successed!!!');
 
-var body = document.querySelector(body);
-console.log(body);
+
+
+
+function getXPath(element) {
+    if (element && element.parentNode) {
+        var xpath = getXPath(element.parentNode) + '/' + element.tagName;
+        let s = [];
+
+        for (var i = 0; i < element.parentNode.childNodes.length; i++) {
+            var e = element.parentNode.childNodes[i];
+            if (e.tagName == element.tagName) {
+                s.push(e);
+            }
+        }
+
+        if (1 < s.length) {
+            for (var i = 0; i < s.length; i++) {
+                if (s[i] === element) {
+                    xpath += '[' + String(i+1) + ']'
+                    break;
+                }
+            }
+        }
+
+        return xpath.toLowerCase();
+
+    } else {
+        return '';
+    }
+}
