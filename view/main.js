@@ -12,7 +12,14 @@ app.on('ready', () => {
     let path = 'file://' + __dirname + '/index.html';
     mainWindow.loadURL(path);
 
-    const view = new BrowserView();
+    const view = new BrowserView(
+        {
+            webPreferences: {
+                preload: 'inject.js'
+            }
+        }
+
+    );
     view.webContents.openDevTools();
     view.webContents.loadURL('https://www.google.com/');
     mainWindow.setBrowserView(view);
