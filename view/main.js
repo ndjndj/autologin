@@ -2,6 +2,7 @@ const electron = require('electron');
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 const BrowserView = electron.BrowserView;
+const path = require('path');
 
 let mainWindow = null;
 app.on('ready', () => {
@@ -15,7 +16,7 @@ app.on('ready', () => {
     const view = new BrowserView(
         {
             webPreferences: {
-                preload:
+                preload: 
             }
         }
 
