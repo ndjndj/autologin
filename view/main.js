@@ -18,10 +18,10 @@ app.on('ready', () => {
     mainWindow.setBrowserView(view);
     view.setBounds(
         {
-            x: 200,
-            y: 150,
-            width: 300,
-            height: 150
+            x: 0,
+            y: 0,
+            width: 400,
+            height: 400
         }
     );
     // developper tool を開く
