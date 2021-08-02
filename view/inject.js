@@ -15,6 +15,7 @@ function inputValue(xpath) {
         XPathResult.ANY_TYPE,
         null
     );
+    xpathResult.singleNodeValue.value = 'auto input';
 }
 
 function getXPath(element) {
