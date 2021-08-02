@@ -7,6 +7,15 @@ document.addEventListener(
     }
 );
 
+function inputValue(xpath) {
+    let xpathResult = document.evaluate(
+        xpath,
+        document,
+        null,
+        XPathResult.ANY_TYPE,
+        null
+    );
+}
 
 function getXPath(element) {
     if (element && element.parentNode) {
