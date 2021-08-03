@@ -4,6 +4,7 @@ document.addEventListener(
     'click',
     function(e) {
         console.log(getXPath(e.target));
+        inputValue(getXPath(e.target));
     }
 );
 
@@ -12,10 +13,16 @@ function inputValue(xpath) {
         xpath,
         document,
         null,
-        XPathResult.ANY_TYPE,
+        XPathResult.FIRST_ORDERED_NODE_TYPE,
         null
     );
+    console.log(xpath);
+    console.log(xpathResult);
+    console.log(xpathResult.singleNodeValue);
+    console.log(xpathResult.singleNodeValue.value);
     xpathResult.singleNodeValue.value = 'auto input';
+
+
 }
 
 function getXPath(element) {
