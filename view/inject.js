@@ -21,8 +21,6 @@ function inputValue(xpath) {
     console.log(xpathResult.singleNodeValue);
     console.log(xpathResult.singleNodeValue.value);
     xpathResult.singleNodeValue.value = 'auto input';
-
-
 }
 
 function getXPath(element) {
