@@ -32,6 +32,7 @@ app.on('ready', () => {
             height: 400
         }
     );
+    console.log(view.getFocusedWebContents());
     // developper tool を開く
     // mainWindow.webContents.openDevTools();
 

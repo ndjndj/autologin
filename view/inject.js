@@ -1,3 +1,5 @@
+const { closeSync } = require("original-fs");
+
 console.log('injection successed!!!');
 
 document.addEventListener(
