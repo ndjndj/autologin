@@ -3,6 +3,7 @@ const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 const BrowserView = electron.BrowserView;
 const path = require('path');
+const { ipcMain } = require("electron");
 
 let mainWindow = null;
 app.on('ready', () => {
@@ -32,7 +33,8 @@ app.on('ready', () => {
             height: 400
         }
     );
-    console.log(view.getFocusedWebContents());
+    console.log('view');
+    console.log(view.webContents);
     // developper tool を開く
     // mainWindow.webContents.openDevTools();
 
