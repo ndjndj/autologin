@@ -42,3 +42,7 @@ app.on('ready', () => {
         mainWindow = null;
     });
 });
+
+ipcMain.on('test-send', (event, arg) => {
+    event.reply('test-reply', data)
+  })
