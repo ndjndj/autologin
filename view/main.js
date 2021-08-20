@@ -44,5 +44,5 @@ app.on('ready', () => {
 });
 
 ipcMain.on('test-send', (event, arg) => {
-    event.reply('test-reply', data)
+    event.reply('test-reply', )
   })
