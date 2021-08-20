@@ -1,11 +1,11 @@
 console.log("index.js")
 //ipcRendererモジュールをインポート
-const { ipcRenderer } = require("electron");
+//const { ipcRenderer } = require("electron");
 
-var sampleValue = "sample1";
+//var sampleValue = "sample1";
 
 //メインプロセスのipcMain.on("test-send")に変数dataを送る
-ipcRenderer.send("test-send", sampleValue);
+//ipcRenderer.send("test-send", sampleValue);
 
 
 function onClickURL() {
@@ -14,5 +14,11 @@ function onClickURL() {
     return id.value
 }
 
-const submit = document.getElementById("submit");
-submit.addEventListener("click", onClickURL);
+window.addEventListener(
+    "load",
+    () => {
+        const submit = document.getElementById("submit");
+        submit.addEventListener("click", onClickURL);
+
+    }
+);
