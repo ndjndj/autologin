@@ -13,3 +13,6 @@ function onClickURL() {
     console.log(id.value);
     return id.value
 }
+
+const submit = document.getElementById("submit");
+submit.addEventListener("click", onClickURL);
