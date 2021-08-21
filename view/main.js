@@ -8,7 +8,13 @@ const { ipcMain } = require("electron");
 let mainWindow = null;
 app.on('ready', () => {
     // mainWindow を作成
-    mainWindow = new BrowserWindow({width: 400, height: 600, webPreferences: {nodeIntegration: true}});
+    mainWindow = new BrowserWindow({
+        width: 400,
+        height: 600,
+        webPreferences: {
+            preload: path.join(app.getAppPath(), 'package.js')
+        }
+    });
 
     // html を指定
     let fileName = 'file://' + __dirname + '/index.html';
