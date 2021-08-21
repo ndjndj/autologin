@@ -28,7 +28,6 @@ app.on('ready', () => {
                 preload: path.join(app.getAppPath(), 'inject.js')
             }
         }
-
     );
     view.webContents.openDevTools();
     view.webContents.loadURL('https://www.google.com/');
@@ -43,14 +42,14 @@ app.on('ready', () => {
     );
     // developper tool を開く
     // mainWindow.webContents.openDevTools();
+    ipcMain.on('test-send', (event, arg) => {
+        console.log('massage received.');
+        console.log(arg);
+        view.webContents.loadURL(arg);
+        event.reply('test-reply', )
+      })
 
     mainWindow.on('closed', function() {
         mainWindow = null;
     });
 });
-
-ipcMain.on('test-send', (event, arg) => {
-    console.log('massage received.');
-    console.log(arg);
-    event.reply('test-reply', )
-  })
