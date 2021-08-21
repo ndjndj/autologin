@@ -12,7 +12,9 @@ app.on('ready', () => {
         width: 400,
         height: 600,
         webPreferences: {
-            preload: path.join(app.getAppPath(), 'package.js')
+            nodeIntegration: true,
+            contextIsolation: false,
+            enableRemoteModule: true,
         }
     });
 
