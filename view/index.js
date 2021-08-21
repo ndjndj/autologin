@@ -1,6 +1,6 @@
 console.log("index.js")
 //ipcRendererモジュールをインポート
-const { ipcRenderer } = window.native;
+const { ipcRenderer } = require('electron');
 
 //メインプロセスのipcMain.on("test-send")に変数dataを送る
 
