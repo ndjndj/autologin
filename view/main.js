@@ -41,8 +41,6 @@ app.on('ready', () => {
             height: 400
         }
     );
-    console.log('view');
-    console.log(view.webContents);
     // developper tool を開く
     // mainWindow.webContents.openDevTools();
 
@@ -52,5 +50,7 @@ app.on('ready', () => {
 });
 
 ipcMain.on('test-send', (event, arg) => {
+    console.log('massage received.');
+    console.log(arg);
     event.reply('test-reply', )
   })
