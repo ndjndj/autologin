@@ -18,6 +18,6 @@ window.addEventListener(
     () => {
         const submit = document.getElementById("submit");
         submit.addEventListener("click", onClickURL);
-
+        ipcRenderer.send("visit-webview");
     }
 );
