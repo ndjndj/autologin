@@ -21,3 +21,10 @@ window.addEventListener(
         ipcRenderer.send("visit-webview");
     }
 );
+
+window.addEventListener(
+    "beforeunload",
+    () => {
+        ipcRenderer.send("unload-webview");
+    }
+);
