@@ -29,17 +29,7 @@ app.on('ready', () => {
             }
         }
     );
-    view.webContents.openDevTools();
-    view.webContents.loadURL('https://www.google.com/');
-    mainWindow.setBrowserView(view);
-    view.setBounds(
-        {
-            x: 0,
-            y: 200,
-            width: 400,
-            height: 400
-        }
-    );
+
     // developper tool を開く
     // mainWindow.webContents.openDevTools();
     ipcMain.on('test-send', (event, arg) => {
@@ -47,7 +37,24 @@ app.on('ready', () => {
         console.log(arg);
         view.webContents.loadURL(arg);
         event.reply('test-reply', )
-      })
+      });
+
+    ipcMain.on('visit-webview', (event, arg) => {
+        console.log("visit-webview");
+
+        view.webContents.openDevTools();
+        view.webContents.loadURL('https://www.google.com/');
+        mainWindow.setBrowserView(view);
+        view.setBounds(
+            {
+                x: 0,
+                y: 200,
+                width: 400,
+                height: 400
+            }
+        );
+        mainWindow.setBrowserView(view);
+    });
 
     mainWindow.on('closed', function() {
         mainWindow = null;
