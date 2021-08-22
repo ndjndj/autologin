@@ -56,6 +56,10 @@ app.on('ready', () => {
         mainWindow.setBrowserView(view);
     });
 
+    ipcMain.on('unload-webview', (event, arg) => {
+        mainWindow.removeBrowserView(view);
+    });
+
     mainWindow.on('closed', function() {
         mainWindow = null;
     });
