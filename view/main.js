@@ -25,7 +25,10 @@ app.on('ready', () => {
     const view = new BrowserView(
         {
             webPreferences: {
-                preload: path.join(app.getAppPath(), 'inject.js')
+                preload: path.join(app.getAppPath(), 'inject.js'),
+                nodeIntegration: true,
+                contextIsolation: false,
+                enableRemoteModule: true
             }
         }
     );
