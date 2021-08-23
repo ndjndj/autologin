@@ -1,4 +1,5 @@
 const { closeSync } = require("original-fs");
+const { ipcRenderer } = require('electron');
 
 console.log('injection successed!!!');
 
@@ -22,6 +23,7 @@ function inputValue(xpath) {
     console.log(xpathResult);
     console.log(xpathResult.singleNodeValue);
     console.log(xpathResult.singleNodeValue.value);
+    ipcRenderer.send('browserView-send', xpath);
     xpathResult.singleNodeValue.value = 'auto input';
 }
 
