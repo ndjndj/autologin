@@ -28,3 +28,7 @@ window.addEventListener(
         ipcRenderer.send("unload-webview");
     }
 );
+
+ipcRenderer.on('browserWindow-send', (event, arg) => {
+    console.log(arg);
+});
