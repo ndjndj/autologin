@@ -11,6 +11,10 @@ document.addEventListener(
     }
 );
 
+ipcRenderer.on('browserWindow-send', (event, arg) => {
+    console.log(arg);
+});
+
 function inputValue(xpath) {
     let xpathResult = document.evaluate(
         xpath,
