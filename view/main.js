@@ -65,6 +65,7 @@ app.on('ready', () => {
 
     ipcMain.on('browserView-send', (event, arg) => {
         console.log(arg);
+        mainWindow.webContents.send('browser-window-send');
     });
 
     mainWindow.on('closed', function() {
