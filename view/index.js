@@ -37,6 +37,6 @@ ipcRenderer.on('browserWindow-send', (event, arg) => {
 function createDOM(arg){
     const clickedPath = document.getElementById('clicked-path');
     const p = document.createElement('p');
-    p.value = arg;
-    document.body.insertBefore(p, clickedPath);
+    p.innerText = arg;
+    clickedPath.appendChild(p);
 }
