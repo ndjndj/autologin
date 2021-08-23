@@ -63,6 +63,10 @@ app.on('ready', () => {
         mainWindow.removeBrowserView(view);
     });
 
+    ipcMain.on('browserView-send', (event, arg) => {
+        console.log(arg);
+    });
+
     mainWindow.on('closed', function() {
         mainWindow = null;
     });
