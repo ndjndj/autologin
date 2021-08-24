@@ -1,8 +1,8 @@
 const canUpdate = () => {
-    if() {
+    const currentVersion = true;
+    const fetchVersion = true;
 
-    }
-    return
+    return currentVersion != fetchVersion
 }
 
 export default canUpdate;
