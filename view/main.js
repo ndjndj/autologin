@@ -50,10 +50,10 @@ app.on('ready', () => {
         mainWindow.setBrowserView(view);
         view.setBounds(
             {
-                x: 200,
+                x: 600,
                 y: 0,
                 width: 600,
-                height: 400
+                height: 600
             }
         );
         mainWindow.setBrowserView(view);
