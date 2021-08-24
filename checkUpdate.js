@@ -1,5 +1,8 @@
-const checkUpdate = () => {
+const canUpdate = () => {
+    if() {
 
+    }
+    return
 }
 
-export default checkUpdate;
+export default canUpdate;
