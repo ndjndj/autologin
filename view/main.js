@@ -9,7 +9,7 @@ let mainWindow = null;
 app.on('ready', () => {
     // mainWindow を作成
     mainWindow = new BrowserWindow({
-        width: 800,
+        width: 1200,
         height: 600,
         webPreferences: {
             nodeIntegration: true,
@@ -51,7 +51,7 @@ app.on('ready', () => {
         view.setBounds(
             {
                 x: 200,
-                y: 200,
+                y: 0,
                 width: 600,
                 height: 400
             }
