@@ -13,6 +13,13 @@ function onClickURL() {
     return id.value
 }
 
+function createDOM(arg){
+    const clickedPath = document.getElementById('clicked-path');
+    const p = document.createElement('p');
+    p.innerText = arg;
+    clickedPath.appendChild(p);
+}
+
 window.addEventListener(
     "load",
     () => {
@@ -33,10 +40,3 @@ ipcRenderer.on('browserWindow-send', (event, arg) => {
     console.log(arg);
     createDOM(arg);
 });
-
-function createDOM(arg){
-    const clickedPath = document.getElementById('clicked-path');
-    const p = document.createElement('p');
-    p.innerText = arg;
-    clickedPath.appendChild(p);
-}
