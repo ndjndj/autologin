@@ -20,6 +20,10 @@ function createDOM(arg){
     clickedPath.appendChild(p);
 }
 
+function addClick() {
+    return
+}
+
 window.addEventListener(
     "load",
     () => {
