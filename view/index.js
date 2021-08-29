@@ -21,7 +21,8 @@ function createDOM(arg){
 }
 
 function addClick() {
-    return
+    const tex = "CLICK";
+    createDOM(tex);
 }
 
 window.addEventListener(
