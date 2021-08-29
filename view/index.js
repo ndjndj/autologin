@@ -33,7 +33,7 @@ window.addEventListener(
         ipcRenderer.send("visit-webview");
 
         const click = document.getElementById("do-click");
-        click,addEventListener("click", addClick);
+        click.addEventListener("click", addClick);
     }
 );
 
