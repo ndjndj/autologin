@@ -39,6 +39,9 @@ window.addEventListener(
 
         const click = document.getElementById("do-click");
         click.addEventListener("click", addClick);
+
+        const input = document.getElementById("do-input");
+        input.addEventListener("click", addInput);
     }
 );
 
