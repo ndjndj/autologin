@@ -25,6 +25,11 @@ function addClick() {
     createDOM(tex);
 }
 
+function addInput() {
+    const tex = "INPUT";
+    createDOM(tex);
+}
+
 window.addEventListener(
     "load",
     () => {
