@@ -15,7 +15,9 @@ function Initialize() {
     return js
 }
 
-
+function addJson(js) {
+    return js
+}
 
 function createDOM(arg){
     const clickedPath = document.getElementById('clicked-path');
