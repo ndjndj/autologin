@@ -3,15 +3,19 @@ console.log("index.js")
 const { ipcRenderer } = require('electron');
 
 //メインプロセスのipcMain.on("test-send")に変数dataを送る
-
-
-
 function onClickURL() {
     const id = document.getElementById("url");
     console.log(id.value);
     ipcRenderer.send("test-send", id.value);
     return id.value
 }
+
+function Initialize() {
+    const js = {}
+    return js
+}
+
+
 
 function createDOM(arg){
     const clickedPath = document.getElementById('clicked-path');
