@@ -11,11 +11,15 @@ function onClickURL() {
 }
 
 function Initialize() {
-    const js = {}
+    const js = {
+        'url': '',
+        'path': []
+    }
     return js
 }
 
 function addJson(js) {
+    
     return js
 }
 
