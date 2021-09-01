@@ -18,8 +18,8 @@ function Initialize() {
     return js
 }
 
-function addJson(js) {
-    
+function addJson(js, attr) {
+    js['path'].push(attr);
     return js
 }
 
