@@ -1,4 +1,8 @@
 
+function initializeJson() {
+    return
+}
+
 function deleteJson() {
     return
 }
