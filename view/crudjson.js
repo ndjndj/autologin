@@ -8,7 +8,10 @@ function deleteJson() {
 }
 
 function importJson() {
-    return
+    const fs = require('fs');
+    const json = fs.readFileSync('sample.json', 'utf-8');
+    const jsonObj = JSON.parse(json);
+    return jsonObj
 }
 
 function editJson() {
