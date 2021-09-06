@@ -14,8 +14,9 @@ function importJson() {
     return jsonObj
 }
 
-function editJson() {
-    return
+function editJson(jsonObj, key, value) {
+    jsonObj[key] = value;
+    return jsonObj
 }
 
 export default editJson;
