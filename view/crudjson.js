@@ -1,6 +1,7 @@
 
 function initializeJson() {
-    return
+    const json = {};
+    return json
 }
 
 function deleteJson() {
