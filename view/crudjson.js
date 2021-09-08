@@ -4,8 +4,9 @@ function initializeJson() {
     return json
 }
 
-function deleteJson() {
-    return
+function deleteJson(jsonObj, key) {
+    jsonObj[key] = null;
+    return jsonObj
 }
 
 function importJson() {
