@@ -4,7 +4,7 @@ const BrowserWindow = electron.BrowserWindow;
 const BrowserView = electron.BrowserView;
 const path = require('path');
 const { ipcMain } = require("electron");
-const crudJson = require("crudjson.js");
+const crudJson = require("./crudjson");
 
 let mainWindow = null;
 app.on('ready', () => {
