@@ -1,24 +1,23 @@
 
-function initializeJson() {
+exports.initializeJson = () => {
     const json = {};
     return json
 }
 
-function deleteJson(jsonObj, key) {
+exports.deleteJson = (jsonObj, key) => {
     jsonObj[key] = null;
     return jsonObj
 }
 
-function importJson() {
+exports.importJson = () => {
     const fs = require('fs');
     const json = fs.readFileSync('sample.json', 'utf-8');
     const jsonObj = JSON.parse(json);
     return jsonObj
 }
 
-function editJson(jsonObj, key, value) {
+exports.editJson = (jsonObj, key, value) => {
     jsonObj[key] = value;
     return jsonObj
 }
 
-export default editJson;
