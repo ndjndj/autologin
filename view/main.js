@@ -69,6 +69,11 @@ app.on('ready', () => {
         mainWindow.webContents.send('browserWindow-send', arg);
     });
 
+    ipcMain.on('json-send', (event, arg) => {
+        const json = crudJson.importJson();
+        mainWindoq.webContents.send('json-return', json);
+    });
+
     mainWindow.on('closed', function() {
         mainWindow = null;
     });
