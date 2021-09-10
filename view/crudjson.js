@@ -20,7 +20,3 @@ exports.editJson = (jsonObj, key, value) => {
     jsonObj[key] = value;
     return jsonObj
 }
-
-exports.viewJson = () => {
-    return
-}
