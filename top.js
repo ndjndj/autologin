@@ -1,5 +1,6 @@
 const { ipcRenderer } = require('electron');
 
-function loadJson() {
-    
-}
+ipcRenderer.send('json-send');
+ipcRenderer.on('json-return', (event, arg) => {
+    console.log(arg);
+});
