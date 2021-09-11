@@ -45,13 +45,14 @@ window.addEventListener(
     () => {
         const submit = document.getElementById("submit");
         submit.addEventListener("click", onClickURL);
-        ipcRenderer.send("visit-webview");
 
         const click = document.getElementById("do-click");
         click.addEventListener("click", addClick);
 
         const input = document.getElementById("do-input");
         input.addEventListener("click", addInput);
+
+        ipcRenderer.send("visit-webview");
     }
 );
 
