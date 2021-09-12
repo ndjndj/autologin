@@ -10,14 +10,6 @@ function onClickURL() {
     return id.value
 }
 
-function Initialize() {
-    const js = {
-        'url': '',
-        'path': []
-    }
-    return js
-}
-
 function addJson(js, attr) {
     js['path'].push(attr);
     return js
