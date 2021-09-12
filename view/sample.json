@@ -1,7 +1,7 @@
 {
     "1": {
         "title": "title1",
-        "url": "https://",
+        "url": "https:\/\/qiita.com\/",
         "elements": [
             {"id": 1, "attribute": "input", "xpath": "aaaaaaa", "text": "input1"},
             {"id": 2, "attribute": "input", "xpath": "aaaaaaa", "text": "input"},
@@ -10,7 +10,7 @@
     },
     "2": {
         "title": "title1",
-        "url": "https://",
+        "url": "https:\/\/qiita.com\/",
         "elements": [
             {"id": 1, "attribute": "input", "xpath": "aaaaaaa", "text": "input1"},
             {"id": 2, "attribute": "input", "xpath": "aaaaaaa", "text": "input"},
