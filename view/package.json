@@ -4,6 +4,6 @@
   "main": "main.js",
   "license": "MIT",
   "dependencies": {
-    "electron": "^13.1.7"
+    "electron": "^14.0.1"
   }
 }
