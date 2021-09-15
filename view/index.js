@@ -33,7 +33,7 @@ function addInput() {
 }
 
 function doSave() {
-    const question = 'save it?';
+    const question = confirm('save it?');
     if(!question) { return };
 
     try {
