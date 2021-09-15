@@ -25,12 +25,12 @@ function createDOM(arg, className){
 
 function addClick() {
     const tex = "CLICK";
-    createDOM(tex);
+    createDOM(tex, 'click');
 }
 
 function addInput() {
     const tex = "INPUT";
-    createDOM(tex);
+    createDOM(tex, 'input');
 }
 
 function doSave() {
@@ -74,5 +74,5 @@ window.addEventListener(
 
 ipcRenderer.on('browserWindow-send', (event, arg) => {
     console.log(arg);
-    createDOM(arg);
+    createDOM(arg, 'focus');
 });
