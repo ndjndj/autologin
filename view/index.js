@@ -15,10 +15,11 @@ function addJson(js, attr) {
     return js
 }
 
-function createDOM(arg){
+function createDOM(arg, className){
     const clickedPath = document.getElementById('clicked-path');
     const p = document.createElement('p');
     p.innerText = arg;
+    p.className = className;
     clickedPath.appendChild(p);
 }
 
@@ -37,6 +38,9 @@ function doSave() {
     if(!question) { return };
 
     try {
+        const path = document.getElementById('clicked-path').childNodes;
+        console.log(path);
+
         window.alert('success.');
     } catch(e) {
         window.alert('falied save.');
