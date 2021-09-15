@@ -9,9 +9,9 @@ ipcRenderer.on('json-return', (event, arg) => {
         hrefTag.innerText = value['title'];
         hrefTag.href = value['url'];
         hrefTag.id = key;
+        hrefTag.className = 'site';
 
         site.appendChild(hrefTag);
-
 
     }
 });

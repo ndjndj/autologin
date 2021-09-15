@@ -15,7 +15,7 @@ app.on('ready', () => {
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
-            enableRemoteModule: true,
+            enableRemoteModule: true
         }
     });
 
@@ -29,7 +29,8 @@ app.on('ready', () => {
                 preload: path.join(app.getAppPath(), 'inject.js'),
                 nodeIntegration: true,
                 contextIsolation: false,
-                enableRemoteModule: true
+                enableRemoteModule: true,
+                nativeWindowOpen: true
             }
         }
     );
