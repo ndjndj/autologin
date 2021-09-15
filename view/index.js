@@ -32,7 +32,7 @@ function addInput() {
     createDOM(tex);
 }
 
-function save() {
+function doSave() {
     const question = 'save it?';
     if(!question) { return };
 
@@ -54,7 +54,9 @@ window.addEventListener(
 
         const input = document.getElementById("do-input");
         input.addEventListener("click", addInput);
-        
+
+        const save = document.getElementById('save');
+        save.addEventListener('click', doSave);
         ipcRenderer.send("visit-webview");
     }
 );
