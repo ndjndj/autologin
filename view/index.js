@@ -41,13 +41,12 @@ function doSave() {
         const path = document.getElementById('clicked-path').childNodes;
         const crudJson = require('./crudjson');
         const storedJson = crudJson.importJson();
-
-
+        const storedJsonSize = Object.keys(storedJson).length;
 
         let saveJson = {};
         saveJson['title'] = 'title sample'; // サイトのタイトルを取得
         saveJson['url'] = document.getElementById('url').innerText;
-
+        
         window.alert('success.');
     } catch(e) {
         window.alert('falied save.');
