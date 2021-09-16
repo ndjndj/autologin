@@ -39,7 +39,14 @@ function doSave() {
 
     try {
         const path = document.getElementById('clicked-path').childNodes;
-        console.log(path);
+        const crudJson = require('./crudjson');
+        const storedJson = crudJson.importJson();
+
+
+
+        let saveJson = {};
+        saveJson['title'] = 'title sample'; // サイトのタイトルを取得
+        saveJson['url'] = document.getElementById('url').innerText;
 
         window.alert('success.');
     } catch(e) {
