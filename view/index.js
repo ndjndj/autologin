@@ -40,13 +40,18 @@ function doSave() {
     try {
         const path = document.getElementById('clicked-path').childNodes;
         const crudJson = require('./crudjson');
-        const storedJson = crudJson.importJson();
-        const storedJsonSize = Object.keys(storedJson).length;
+        let storedJson = crudJson.importJson();
+        const storedJsonSize = Number(Object.keys(storedJson).length) + 1;
 
         let saveJson = {};
         saveJson['title'] = 'title sample'; // サイトのタイトルを取得
         saveJson['url'] = document.getElementById('url').innerText;
+        saveJson['elements'] = [];
+
+        storedJson[String(storedJsonSize)] = saveJson;
+
         
+
         window.alert('success.');
     } catch(e) {
         window.alert('falied save.');
