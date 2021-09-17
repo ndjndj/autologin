@@ -75,6 +75,10 @@ app.on('ready', () => {
         mainWindow.webContents.send('json-return', json);
     });
 
+    ipcMain.on('save-json', (event, arg) => {
+        console.log(1111);
+    })
+
     mainWindow.on('closed', function() {
         mainWindow = null;
     });
