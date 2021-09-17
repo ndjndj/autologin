@@ -50,7 +50,7 @@ function doSave() {
 
         storedJson[String(storedJsonSize)] = saveJson;
 
-        
+        ipcRenderer.send('save-json', storedJson);
 
         window.alert('success.');
     } catch(e) {
