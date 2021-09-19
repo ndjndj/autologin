@@ -76,7 +76,7 @@ app.on('ready', () => {
     });
 
     ipcMain.on('save-json', (event, arg) => {
-        console.log(1111);
+        event.returnValue = true;
     })
 
     mainWindow.on('closed', function() {
