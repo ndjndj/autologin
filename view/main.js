@@ -76,7 +76,15 @@ app.on('ready', () => {
     });
 
     ipcMain.on('save-json', (event, arg) => {
-        event.returnValue = true;
+
+        try {
+            const fs = require('fs');
+            fs.writeFile('sample.json', JSON.stringify(arg, null, '    '));
+            event.returnValue = true;
+        } catch(e) {
+            event.returnValue = false;
+        }
+
     })
 
     mainWindow.on('closed', function() {
