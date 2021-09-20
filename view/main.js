@@ -79,9 +79,10 @@ app.on('ready', () => {
 
         try {
             const fs = require('fs');
-            fs.writeFile('sample.json', JSON.stringify(arg, null, '    '));
+            fs.writeFileSync('sample.json', JSON.stringify(arg, null, '    '));
             event.returnValue = true;
         } catch(e) {
+            console.log(e.message);
             event.returnValue = false;
         }
 
