@@ -51,8 +51,10 @@ function doSave() {
         storedJson[String(storedJsonSize)] = saveJson;
 
         let saveFlg = ipcRenderer.sendSync('save-json', storedJson);
-        
-        window.alert('success.');
+        if (saveFlg) {
+            window.alert('success.');
+        }
+
     } catch(e) {
         window.alert('falied save.');
     }
