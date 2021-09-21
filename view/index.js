@@ -44,7 +44,7 @@ function doSave() {
         const storedJsonSize = Number(Object.keys(storedJson).length) + 1;
 
         let saveJson = {};
-        saveJson['title'] = 'title sample'; // サイトのタイトルを取得
+        saveJson['title'] = document.getElementById('site-title').innerText;
         saveJson['url'] = document.getElementById('url').innerText;
         saveJson['elements'] = [];
 
