@@ -50,7 +50,7 @@ function doSave() {
 
         let elemJson = {};
         for(var i=0; i < path.length; i++) {
-            elemJson['id'] = String(i+1);
+            elemJson['id'] = i+1;
             elemJson['attribute'] = path[i].className;
             saveJson['elements'].push(elemJson);
             elemJson = {}
