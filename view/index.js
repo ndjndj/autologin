@@ -48,6 +48,13 @@ function doSave() {
         saveJson['url'] = document.getElementById('url').innerText;
         saveJson['elements'] = [];
 
+        let elemJson = {};
+        for(var i=0; i < path.length; i++) {
+            elemJson['id'] = String(i+1);
+            elemJson['attribute'] = path[i].className;
+            saveJson['elements'].push(elemJson);
+            elemJson = {}
+        }
         storedJson[String(storedJsonSize)] = saveJson;
 
         let saveFlg = ipcRenderer.sendSync('save-json', storedJson);
