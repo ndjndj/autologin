@@ -7,6 +7,7 @@ const { ipcMain } = require("electron");
 const crudJson = require("./crudjson");
 
 let mainWindow = null;
+let child = null;
 app.on('ready', () => {
     // mainWindow を作成
     mainWindow = new BrowserWindow({
