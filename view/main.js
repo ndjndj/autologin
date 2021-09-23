@@ -20,6 +20,16 @@ app.on('ready', () => {
         }
     });
 
+    child = new BrowserWindow({
+        width: 600,
+        height: 600,
+        parent: mainWindow,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false,
+            enableRemoteModule: true
+        }
+    });
     // html を指定
     let fileName = 'file://' + __dirname + '/index.html';
     mainWindow.loadURL(fileName);
