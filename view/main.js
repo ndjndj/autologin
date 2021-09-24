@@ -30,6 +30,7 @@ app.on('ready', () => {
             enableRemoteModule: true
         }
     });
+
     // html を指定
     let fileName = 'file://' + __dirname + '/index.html';
     mainWindow.loadURL(fileName);
@@ -46,8 +47,6 @@ app.on('ready', () => {
         }
     );
 
-    // developper tool を開く
-    // mainWindow.webContents.openDevTools();
     ipcMain.on('test-send', (event, arg) => {
         console.log('massage received.');
         console.log(arg);
@@ -57,10 +56,9 @@ app.on('ready', () => {
 
     ipcMain.on('visit-webview', (event, arg) => {
         console.log("visit-webview");
-
+        child.loadURL(fileName);
         view.webContents.openDevTools();
         view.webContents.loadURL('https://www.google.com/');
-        mainWindow.setBrowserView(view);
         view.setBounds(
             {
                 x: 600,
@@ -69,7 +67,7 @@ app.on('ready', () => {
                 height: 600
             }
         );
-        mainWindow.setBrowserView(view);
+        child.setBrowserView(view);
     });
 
     ipcMain.on('unload-webview', (event, arg) => {
