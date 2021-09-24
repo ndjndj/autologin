@@ -11,7 +11,7 @@ let child = null;
 app.on('ready', () => {
     // mainWindow を作成
     mainWindow = new BrowserWindow({
-        width: 1200,
+        width: 600,
         height: 600,
         webPreferences: {
             nodeIntegration: true,
@@ -61,7 +61,7 @@ app.on('ready', () => {
         view.webContents.loadURL('https://www.google.com/');
         view.setBounds(
             {
-                x: 600,
+                x: 0,
                 y: 0,
                 width: 600,
                 height: 600
