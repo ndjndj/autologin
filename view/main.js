@@ -96,7 +96,11 @@ app.on('ready', () => {
             event.returnValue = false;
         }
 
-    })
+    });
+
+    child.on('closed', function() {
+        child = null;
+    });
 
     mainWindow.on('closed', function() {
         mainWindow = null;
