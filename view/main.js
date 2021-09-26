@@ -98,7 +98,9 @@ app.on('ready', () => {
         }
 
     });
-
+    view.on('close', function(){
+        const question = confirm('quit?');
+    });
     mainWindow.on('closed', function() {
         mainWindow = null;
     });
