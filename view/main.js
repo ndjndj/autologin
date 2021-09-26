@@ -8,6 +8,7 @@ const crudJson = require("./crudjson");
 
 let mainWindow = null;
 let child = null;
+let view = null;
 app.on('ready', () => {
     // mainWindow を作成
     mainWindow = new BrowserWindow({
@@ -25,17 +26,7 @@ app.on('ready', () => {
     let fileName = 'file://' + __dirname + '/index.html';
     mainWindow.loadURL(fileName);
 
-    const view = new BrowserView(
-        {
-            webPreferences: {
-                preload: path.join(app.getAppPath(), 'inject.js'),
-                nodeIntegration: true,
-                contextIsolation: false,
-                enableRemoteModule: true,
-                nativeWindowOpen: true
-            }
-        }
-    );
+
 
     ipcMain.on('test-send', (event, arg) => {
         console.log('massage received.');
@@ -55,7 +46,17 @@ app.on('ready', () => {
                 enableRemoteModule: true
             }
         });
-
+        view = new BrowserView(
+            {
+                webPreferences: {
+                    preload: path.join(app.getAppPath(), 'inject.js'),
+                    nodeIntegration: true,
+                    contextIsolation: false,
+                    enableRemoteModule: true,
+                    nativeWindowOpen: true
+                }
+            }
+        );
         console.log("visit-webview");
         child.loadURL(fileName);
         view.webContents.openDevTools();
@@ -96,10 +97,6 @@ app.on('ready', () => {
             event.returnValue = false;
         }
 
-    });
-
-    child.on('closed', function() {
-        child = null;
     });
 
     mainWindow.on('closed', function() {
